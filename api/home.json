@@ -17,7 +17,7 @@
         ]
     },
     "banks": {
-        "caption": "bank များ",
+        "caption": "Bank service များ",
         "data": [
             {
                 "image": "/imgs/kbzbank.jpg",

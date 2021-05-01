@@ -1,5 +1,4 @@
-import fs from "fs/promises";
-import path from "path";
+import { getFilePath, getFileData } from "../utils/apiUtils";
 
 import Home from "../components/Home/Home";
 
@@ -8,8 +7,8 @@ function HomePage(props) {
 }
 
 export async function getStaticProps(context) {
-    const filePath = path.join(process.cwd(), "api", "home.json");
-    const data = JSON.parse(await fs.readFile(filePath, "utf8"));
+    const filePath = getFilePath("home");
+    const data = await getFileData(filePath);
     return {
         props: {
             data,

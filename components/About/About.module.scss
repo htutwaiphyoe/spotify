@@ -1,0 +1,24 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.About {
+    width: 100%;
+    max-width: 80rem;
+    margin: 0 auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem 9rem;
+    & div {
+        @include center;
+    }
+    @include fadeIn;
+    &__Figure {
+        width: 20rem;
+        overflow: hidden;
+        @include rounded(100%);
+        box-shadow: $shadow;
+        &__Image {
+            object-fit: cover;
+        }
+    }
+}

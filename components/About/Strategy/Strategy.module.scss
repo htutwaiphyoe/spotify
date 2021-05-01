@@ -1,0 +1,21 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+
+.Strategy {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+
+    & li {
+        padding: 2rem 0;
+
+        box-shadow: $shadow;
+        @include rounded(1rem);
+    }
+
+    & ion-icon {
+        font-size: 5rem;
+        color: $color-primary;
+    }
+}
