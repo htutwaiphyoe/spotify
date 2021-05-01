@@ -1,0 +1,33 @@
+@import "../bases/animation";
+
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin rounded($amount) {
+    border-radius: $amount;
+    -webkit-border-radius: $amount;
+    -moz-border-radius: $amount;
+    -ms-border-radius: $amount;
+    -o-border-radius: $amount;
+}
+
+@mixin responsive($breakpoint, $type) {
+    @if $type == 0 {
+        @media only screen and (max-width: $breakpoint * 1px) {
+            @content;
+        }
+    }
+    @if $type == 1 {
+        @media only screen and (min-width: $breakpoint * 1px) {
+            @content;
+        }
+    }
+}
+
+@mixin fadeIn {
+    animation: fadeIn 0.5s ease;
+    -webkit-animation: fadeIn 0.5s ease;
+}
