@@ -1,0 +1,53 @@
+{
+    "pays": {
+        "caption": "Mobile payment များ",
+        "data": [
+            {
+                "image": "/imgs/kbzpay.jpg",
+                "description": "KBZ Pay"
+            },
+            {
+                "image": "/imgs/cbpay.jpg",
+                "description": "CB Pay"
+            },
+            {
+                "image": "/imgs/wavepay.jpg",
+                "description": "Wave Pay"
+            }
+        ]
+    },
+    "banks": {
+        "caption": "bank များ",
+        "data": [
+            {
+                "image": "/imgs/kbzbank.jpg",
+                "description": "KBZ Bank"
+            },
+            {
+                "image": "/imgs/cbbank.jpg",
+                "description": "CB Bank"
+            },
+            {
+                "image": "/imgs/yoma.png",
+                "description": "YOMA Bank"
+            },
+            {
+                "image": "/imgs/ayabank.jpg",
+                "description": "AYA Bank"
+            }
+        ]
+    },
+    "cards": [
+        {
+            "month": "February",
+            "image": "/imgs/march1.jpg",
+            "description": "ဖေဖော်ဝါရီလအတွက် ပြည်သူ့လစာကို ကျောင်းဆေးခန်းရှိ ကျန်းမာရေးဝန်ထမ်းများမှအပ ကျန်ဝန်ထမ်းများ ရရှိပါသည်။ လစာမရရှိသောကျောင်းကျန်းမာရေးဝန်ထမ်း ၃ ဦးအား CDM Support Team မှ လစာအပြည့် စုစုပေါင်း ၅၄၀,၀၀၀ ကျပ်ကို မတ်လ ၂ ရက်နေ့ ညနေပိုင်းတွင် သွားရောက် ပေးအပ်ခဲ့ပါသည်။"
+        },
+
+        {
+            "month": "March",
+            "image": "/imgs/apr3.jpg",
+            "description": "MTU ရှိ CDM ပြည်သူ့ဝန်ထမ်းများအနက်မှ အမှုထမ်း ၁၄၄ ဦးအား တစ်ဦးလျှင် ၁ သိန်းကျပ်စီဖြင့် ၁၄၄ သိန်းအား ထောက်ပံ့ပေးအပ်ပြီးဖြစ်ပါသည်။ ကျန်ရှိသောပြည်သူ့ဝန်ထမ်းများကိုလည်း ဆက်လက် ဆက်သွယ်ထောက်ပံ့သွားမည်ဖြစ်ပါသည်။"
+        }
+    ]
+}

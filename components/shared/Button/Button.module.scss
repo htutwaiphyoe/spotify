@@ -1,0 +1,36 @@
+@import "../../../sass/abstracts/variables";
+.Button {
+    text-decoration: none;
+    background-color: $color-primary;
+    color: $color-background;
+    padding: 1rem 2rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    font-family: "Libre Franklin";
+    border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    box-shadow: $shadow;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+        color: $color-primary-light;
+    }
+
+    &_Disable {
+        background-color: $color-light;
+        cursor: not-allowed;
+        color: $color-foreground;
+        &:hover {
+            color: $color-foreground;
+        }
+    }
+}

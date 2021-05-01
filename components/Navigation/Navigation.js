@@ -5,7 +5,7 @@ import NavigationItem from "./NavigationItem/NavigationItem";
 const items = [
     { url: "/", icon: "home-sharp", text: "Home" },
     { url: "/about", icon: "information-circle-sharp", text: "About" },
-    { url: "/donation", icon: "people-sharp", text: "Donation" },
+    { url: "/donation", icon: "stats-chart-sharp", text: "Donation" },
     { url: "/contact", icon: "call-sharp", text: "Contact" },
 ];
 function Navigation(props) {

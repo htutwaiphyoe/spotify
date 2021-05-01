@@ -1,0 +1,20 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+.Story {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    & li {
+        box-shadow: $shadow;
+        background-color: $color-white;
+        & figure {
+            width: 100%;
+            max-height: 30rem;
+            overflow: hidden;
+            & img {
+                object-fit: cover;
+            }
+        }
+    }
+}
