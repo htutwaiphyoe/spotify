@@ -1,0 +1,44 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+
+.Amount {
+    width: 100%;
+    display: grid;
+    margin: 0 auto;
+    align-items: center; /* left and right */
+    justify-content: center; /* up and down */
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+
+    &__Item {
+        background-color: $color-white;
+        box-shadow: $shadow;
+
+        padding: 2rem;
+        @include rounded(1rem);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &__Info {
+            color: $color-muted;
+            & h3 {
+                font-size: 2.8rem;
+                line-height: 1.1;
+            }
+            & p {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__Icon {
+            font-size: 3.5rem;
+            width: 5.5rem;
+            height: 5.5rem;
+            @include center;
+            background-color: $color-background;
+            @include rounded(100%);
+            color: $color-muted;
+            align-self: center;
+        }
+    }
+}

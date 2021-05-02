@@ -1,7 +1,7 @@
 import Heading from "../shared/Heading/Heading";
 import Paragraph from "../shared/Paragraph/Paragraph";
-import Story from "./Story/Story";
 import Button from "../shared/Button/Button";
+import Story from "./Story/Story";
 import Payment from "./Payment/Payment";
 import classes from "./Home.module.scss";
 

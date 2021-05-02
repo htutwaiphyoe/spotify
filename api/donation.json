@@ -1,0 +1,88 @@
+{
+    "amounts": [
+        {
+            "type": "total",
+            "amount": 33004162,
+
+            "icon": "arrow-down-circle",
+            "description": "စုစုပေါင်း"
+        },
+        {
+            "type": "supported",
+            "amount": 16800000,
+            "icon": "arrow-up-circle",
+            "description": "ထောက်ပံ့ပြီး"
+        },
+        { "type": "balance", "amount": 16204162, "icon": "wallet", "description": "လက်ကျန်ငွေ" },
+        {
+            "type": "percentage",
+            "amount": "57",
+            "icon": "pie-chart",
+            "description": "ရာခိုင်နှုန်း"
+        }
+    ],
+    "charts": [
+        {
+            "labels": [
+                "Mar19",
+                "Mar26",
+                "Mar28",
+                "Mar31",
+                "Apr1",
+                "Apr5",
+                "Apr6",
+                "Apr7",
+                "Mar19",
+                "Mar26"
+            ],
+            "data": [55000, 5000, 40000, 32000, 35000, 100000, 5000, 155000, 5000, 155000],
+            "caption": "ငွေပမာဏ",
+            "title": "နောက်ဆုံး ကောက်ခံရရှိမှု",
+            "bg": "#9d0208",
+            "type": "line"
+        },
+        {
+            "labels": ["1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "others"],
+            "data": [
+                3405000,
+                1467000,
+                1883000,
+                1469200,
+                1445800,
+                1445612,
+                1230000,
+                842550,
+                19816000
+            ],
+            "caption": "‌ငွေပမာဏ",
+            "title": "Batch အလိုက်နှင့် ပြင်ပမှ ကောက်ခံရရှိမှု",
+            "bg": "#9d0208",
+            "type": "bar"
+        },
+        {
+            "labels": ["စုစုပေါင်း", "ထောက်ပံ့ပြီး", "လက်ကျန်ငွေ"],
+            "data": [33004162, 16800000, 16204162],
+            "title": "ငွေရှင်းတမ်း",
+            "caption": "‌ငွေပမာဏ",
+            "bg": ["#9d0208", "#36A2EB", "#FFCD56"],
+            "type": "pie"
+        }
+    ],
+
+    "donors": [
+        { "name": "ပြင်ပအလှူရှင်များ", "batch": "N/A", "amount": "18,030,000" },
+        { "name": "1st batch ကျောင်းသားဟောင်းများ", "batch": "1st", "amount": "3,405,000" },
+        { "name": "Final ကျောင်းသားများ", "batch": "3rd", "amount": "1,883,000" },
+        {
+            "name": "ဂျပန်နှင့်နော်ဝေရောက် MTU ကျောင်းသားများ",
+            "batch": "N/A",
+            "amount": "1,786,000"
+        },
+        { "name": "5th year ကျောင်းသားများ", "batch": "4th", "amount": "1,469,200" },
+        { "name": "2nd batch ကျောင်းသားဟောင်းများ", "batch": "2nd", "amount": "1,467,000" },
+        { "name": "4th year ကျောင်းသားများ", "batch": "5th", "amount": "1,445,800" },
+        { "name": "3rd year ကျောင်းသားများ", "batch": "6th", "amount": "1,445,612" },
+        { "name": "2nd year ကျောင်းသားများ", "batch": "7th", "amount": "1,230,000" },
+        { "name": "1st year ကျောင်းသားများ", "batch": "8th", "amount": "842,550" }
+    ]
+}

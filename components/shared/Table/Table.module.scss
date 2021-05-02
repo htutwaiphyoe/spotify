@@ -1,0 +1,32 @@
+@import "../../../sass/abstracts/variables";
+@import "../../../sass/abstracts/mixins";
+
+.Table {
+    width: 100%;
+    box-shadow: $shadow;
+    margin-top: 1.5rem;
+    background-color: $color-white;
+    border-collapse: collapse;
+    & thead {
+        text-align: left;
+    }
+
+    & tr:not(:nth-child(10)) {
+        border-bottom: 0.7rem solid $color-background;
+    }
+    & th,
+    & td {
+        padding: 1.5rem 1rem;
+    }
+    & th {
+        font-size: 1.5rem;
+        color: $color-primary;
+    }
+    & td {
+        font-size: 1.5rem;
+        color: $color-muted;
+        @include responsive(575, 0) {
+            font-size: 1.4rem;
+        }
+    }
+}

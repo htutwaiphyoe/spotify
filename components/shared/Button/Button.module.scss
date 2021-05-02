@@ -1,4 +1,5 @@
 @import "../../../sass/abstracts/variables";
+@import "../../../sass/abstracts/mixins";
 .Button {
     text-decoration: none;
     background-color: $color-primary;
@@ -8,10 +9,7 @@
     font-size: 1.6rem;
     font-family: "Libre Franklin";
     border-radius: 0.5rem;
-    -webkit-border-radius: 0.5rem;
-    -moz-border-radius: 0.5rem;
-    -ms-border-radius: 0.5rem;
-    -o-border-radius: 0.5rem;
+    @include rounded(0.5rem);
     box-shadow: $shadow;
     transition: all 0.2s ease;
     -webkit-transition: all 0.2s ease;

@@ -8,6 +8,8 @@
     & li {
         box-shadow: $shadow;
         background-color: $color-white;
+        @include rounded(1rem);
+        overflow: hidden;
         & figure {
             width: 100%;
             max-height: 30rem;

@@ -7,7 +7,8 @@ function Strategy(props) {
         <ul className={classes.Strategy}>
             {items.map((item, i) => (
                 <li key={i}>
-                    <ion-icon name={`${item.icon}-outline`}></ion-icon>
+                    <i className={`fas fa-${item.icon}`}></i>
+
                     <Paragraph>{item.text}</Paragraph>
                 </li>
             ))}

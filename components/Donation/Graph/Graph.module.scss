@@ -1,0 +1,13 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+.Graph {
+    width: 100%;
+    box-shadow: $shadow;
+    height: 40rem;
+    background-color: $color-white;
+    padding: 2rem 1rem;
+    margin-top: 1rem;
+    & canvas {
+        width: 100% !important;
+    }
+}
