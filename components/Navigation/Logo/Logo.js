@@ -10,6 +10,7 @@ function Logo(props) {
                 className={classes.Logo__Image}
                 width={200}
                 height={200}
+                priority={true}
             />
         </figure>
     );

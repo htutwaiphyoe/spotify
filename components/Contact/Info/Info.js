@@ -17,6 +17,7 @@ function Info(props) {
                     width={300}
                     height={300}
                     layout={"responsive"}
+                    priority={true}
                 />
             </figure>
             <Paragraph>

@@ -19,6 +19,7 @@ function About(props) {
                         width={200}
                         height={200}
                         layout="responsive"
+                        priority={true}
                     />
                 </figure>
             </div>

@@ -18,6 +18,7 @@ function PaymentCard(props) {
                                 width={150}
                                 height={150}
                                 layout="responsive"
+                                priority={true}
                             />
                         </figure>
                         <Paragraph>{d.description}</Paragraph>
