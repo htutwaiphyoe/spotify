@@ -8,11 +8,11 @@
 
     & ul {
         @include center;
-        gap: 1rem;
+
         & li {
             font-size: 4rem;
-
-            & a{
+            margin-right: 1rem;
+            & a {
                 color: $color-primary;
             }
         }

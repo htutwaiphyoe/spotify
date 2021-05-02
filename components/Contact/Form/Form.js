@@ -21,8 +21,8 @@ function Form(props) {
                         <label htmlFor="type">feedback</label>
                     </div>
                     <div className={classes.Form__Grid}>
-                        <input type="radio" required id="type" value="report" name="type" />
-                        <label htmlFor="type">report a bug</label>
+                        <input type="radio" required id="bug" value="report" name="type" />
+                        <label htmlFor="bug">report a bug</label>
                     </div>
                 </div>
                 <div className={classes.Form__Control}>
