@@ -9,10 +9,6 @@ function Meta() {
             <meta name="keywords" content="MTU CDM Support Team" />
             <meta name="theme-color" content="#fff" />
             <link rel="manifest" href="/manifest.json" />
-            <meta
-                name="description"
-                content="MTU CDM Support Team is formed by MTU Students' Union to help CDM servents in Mandalay Technological University. MTU CDM Support Team is collecting money and providing monthly"
-            />
 
             <meta
                 property="og:description"
@@ -49,7 +45,6 @@ function Meta() {
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
                 rel="stylesheet"
             />
-            <title>MTU CDM Support Team</title>
         </Head>
     );
 }
