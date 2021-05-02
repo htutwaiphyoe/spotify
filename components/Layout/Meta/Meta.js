@@ -12,7 +12,7 @@ function Meta() {
 
             <meta
                 property="og:description"
-                content="MTU CDM Support Team is formed by MTU Students' Union to help CDM servents in Mandalay Technological University. MTU CDM Support Team is collecting money and providing monthly."
+                content="MTU CDM Support Team is formed by MTU Students' Union to help CDM servents in Mandalay Technological University. "
             />
 
             <meta property="og:site_name" content="MTU CDM Support Team" />
@@ -26,7 +26,7 @@ function Meta() {
             <meta name="twitter:title" content="MTU CDM Support Team" />
             <meta
                 name="twitter:description"
-                content="MTU CDM Support Team is formed by MTU Students' Union to help CDM servents in Mandalay Technological University. CDM Support Team is collecting money and providing monthly."
+                content="MTU CDM Support Team is formed by MTU Students' Union to help CDM servents in Mandalay Technological University."
             />
             <meta name="twitter:image" content="/logo192.png" />
             <meta name="og:image" content="/logo192.png" />

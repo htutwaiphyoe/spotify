@@ -1,9 +1,7 @@
 import Head from "next/head";
-
-import { getFilePath, getFileData } from "../utils/apiUtils";
-
-import Donation from "../components/Donation/Donation";
 import { Fragment } from "react";
+import { getFilePath, getFileData } from "../utils/apiUtils";
+import Donation from "../components/Donation/Donation";
 
 function DonationPage(props) {
     return (

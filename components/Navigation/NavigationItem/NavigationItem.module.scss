@@ -29,16 +29,15 @@
         }
 
         transition: all 0.2s ease;
-        &:hover {
-            color: $color-muted;
-        }
-
-        &:active {
-            color: rgba($color-primary, 0.3);
-        }
+    }
+    & a:hover {
+        color: $color-muted;
     }
 
+    & a:active {
+        color: rgba($color-primary, 0.3);
+    }
     &__Active {
-        color: $color-primary;
+        color: $color-primary !important;
     }
 }
