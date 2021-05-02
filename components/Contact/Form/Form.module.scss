@@ -1,0 +1,54 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+.Form {
+    background-color: $color-white;
+    padding: 2rem;
+    box-shadow: $shadow;
+    @include rounded(1rem);
+
+    & h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        color: $color-muted;
+    }
+
+    & form {
+        width: 100%;
+
+        & label {
+            font-size: 1.7rem;
+            color: $color-muted;
+            font-weight: 700;
+        }
+
+        & input,
+        textarea {
+            border: none;
+            border-bottom: 1px solid $color-background;
+            padding: 1rem 0;
+            outline: none;
+            font-size: 1.6rem;
+            font-family: inherit;
+            color: $color-muted;
+        }
+
+        & button {
+            margin-top: 1rem;
+
+            padding: 1rem 2rem;
+        }
+    }
+
+    &__Control {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 0;
+    }
+
+    &__Grid {
+        display: flex;
+        margin: 1rem 0 0;
+        gap: 1rem;
+        align-items: center;
+    }
+}

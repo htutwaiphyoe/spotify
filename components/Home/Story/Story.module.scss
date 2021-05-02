@@ -3,20 +3,25 @@
 .Story {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    place-content: center;
+    gap: 1.5rem;
     & li {
+        width: 30rem;
         box-shadow: $shadow;
         background-color: $color-white;
         @include rounded(1rem);
         overflow: hidden;
-        & figure {
-            width: 100%;
-            max-height: 30rem;
-            overflow: hidden;
-            & img {
-                object-fit: cover;
-            }
+    }
+    &__Image {
+        width: 100%;
+        max-height: 30rem;
+        overflow: hidden;
+        & img {
+            object-fit: cover;
         }
+    }
+    &__Content {
+        padding: 1rem;
     }
 }

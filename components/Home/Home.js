@@ -9,8 +9,6 @@ function Home(props) {
     const { pays, banks, cards } = props;
     return (
         <section className={classes.Home}>
-            <Heading text={"ထောက်ပံ့မှုများ"} />
-            <Paragraph>လှူဒါန်းမှုများကို CDMဝန်ထမ်းများထံ လစဉ်ထောက်ပံ့ပေးလျက်ရှိပါသည်။</Paragraph>
             <Story data={cards} />
             <Paragraph>
                 CDM သမားများ ဆက်လက်ရပ်တည်နိုင်ရန်အတွက် ထောက်ပံ့လိုပါက MTU Student's Union ၏ Page

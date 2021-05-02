@@ -9,7 +9,7 @@ function Story(props) {
         <ul className={classes.Story}>
             {data.map((d, i) => (
                 <li key={i}>
-                    <figure>
+                    <figure className={classes.Story__Image}>
                         <Image
                             src={d.image}
                             alt={`${d.month} donations`}
@@ -18,8 +18,11 @@ function Story(props) {
                             layout="responsive"
                         />
                     </figure>
-                    <h2>{d.month} လအတွက် ထောက်ပံ့မှုများ</h2>
-                    <Paragraph>{d.description}</Paragraph>
+
+                    <div className={classes.Story__Content}>
+                        <h2>{d.month} လအတွက် ထောက်ပံ့မှုများ</h2>
+                        <Paragraph>{d.description}</Paragraph>
+                    </div>
                 </li>
             ))}
         </ul>

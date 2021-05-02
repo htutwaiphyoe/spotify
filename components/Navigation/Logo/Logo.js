@@ -6,7 +6,7 @@ function Logo(props) {
         <figure className={classes.Logo}>
             <Image
                 src="/imgs/logo192.png"
-                alt="MTU logo"
+                alt="MTU CDM Support Team logo"
                 className={classes.Logo__Image}
                 width={200}
                 height={200}

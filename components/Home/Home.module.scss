@@ -1,10 +1,10 @@
 @import "../../sass/abstracts/mixins";
 @import "../../sass/abstracts/variables";
 .Home {
-    padding: 1rem 2rem 10rem;
+    padding: 1.5rem 2rem 10rem;
     width: 100%;
     max-width: 80rem;
-    @include fadeIn;
+    // @include fadeIn;
     margin: auto;
     @include responsive(575, 0) {
         padding: 1rem 1rem 10rem;

@@ -11,7 +11,7 @@
     & div {
         @include center;
     }
-    @include fadeIn;
+    // @include fadeIn;
     &__Figure {
         width: 20rem;
         overflow: hidden;

@@ -4,7 +4,7 @@
 .Donation {
     padding: 1rem 1rem 12rem;
     width: 100%;
-    max-width: 114rem;
+    max-width: 128rem;
     margin: 0 auto;
 
     &__Grid {
@@ -13,7 +13,7 @@
         align-items: center;
         gap: 1rem;
 
-        @include responsive(785, 0) {
+        @include responsive(767, 0) {
             flex-flow: column;
         }
     }

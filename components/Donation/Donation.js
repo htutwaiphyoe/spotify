@@ -1,6 +1,3 @@
-import Heading from "../shared/Heading/Heading";
-import Paragraph from "../shared/Paragraph/Paragraph";
-import Button from "../shared/Button/Button";
 import Table from "../shared/Table/Table";
 import Amount from "./Amount/Amount";
 import Graph from "./Graph/Graph";
