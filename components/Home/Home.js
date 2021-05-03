@@ -7,7 +7,7 @@ import Payment from "./Payment/Payment";
 import classes from "./Home.module.scss";
 
 function Home(props) {
-    const { pays, banks, cards } = props;
+    const { pays, banks, cards, faqs } = props;
     return (
         <section className={classes.Home}>
             <Story data={cards} />
@@ -24,7 +24,7 @@ function Home(props) {
             <article>
                 <h1>FAQs</h1>
             </article>
-            <FAQ />
+            <FAQ items={faqs} />
             <article>
                 <Paragraph>
                     အောက်ဖော်ပြပါ service များဖြင့် လှူဒါန်းမှုကို ကောက်ခံလျက်ရှိပါသည်။

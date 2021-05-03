@@ -3,7 +3,7 @@
 .Home {
     padding: 1.5rem 2rem 10rem;
     width: 100%;
-    max-width: 70rem;
+    max-width: 128rem;
     // @include fadeIn;
     margin: auto;
     @include responsive(575, 0) {
@@ -20,6 +20,7 @@
         & h1 {
             font-size: 3rem;
             font-weight: 900;
+            line-height: 1;
         }
     }
 }

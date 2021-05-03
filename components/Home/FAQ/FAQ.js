@@ -1,56 +1,16 @@
 import classes from "./FAQ.module.scss";
 
-function FAQ(props) {
+function FAQ({ items }) {
     return (
         <ul className={classes.FAQ}>
-            <li>
-                <details>
-                    <summary>လှူဒါန်းချင်တယ်။ ဘယ်ကိုဆက်သွယ်ရမလဲ။</summary>
-                    <p>
-                        မန္တလေးနည်းပညာတက္ကသိုလ် ကျောင်းသားသမ္မဂ္ဂ၏ Facebook Page ကနေတစ်ဆင့်
-                        Messenger ကိုလာရောက်ဆက်သွယ်လှူဒါန်းနိုင်ပါသည်။
-                    </p>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>ဘယ်သူတွေကို ထောက်ပံ့ပေးတာလဲ။</summary>
-                    <p>
-                        မန္တလေးနည်းပညာတက္ကသိုလ်ရှိ CDMမှာ ပါဝင်‌သော ဆရာ/ဆရာမများအပြင်
-                        ကျောင်းဝန်ထမ်းများ (သန့်ရှင်းရေးဝန်းထမ်းအပါအဝင်) အားလုံးကို ထောက်ပံ့ပါသည်။
-                        ပြင်ပ CDM ဝန်ထမ်းများ မပါဝင်ပါ။
-                    </p>
-                </details>
-            </li>
-
-            <li>
-                <details>
-                    <summary>ဘယ်လို ထောက်ပံ့တာလဲ။</summary>
-                    <p>
-                        မန္တလေးနည်းပညာတက္ကသိုလ်ရှိ CDMဝန်ထမ်းများထံသို့ လစဉ် MTU CDM Support Team၏
-                        အသင်းသားများ မှကိုယ်တိုင်သွားရောက်ကာ ထောက်ပံ့ငွေပေးအပ်ပါသည်။
-                    </p>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>ဂုဏ်ပြုလွှာ ရနိုင်ပါသလား။</summary>
-                    <p>
-                        လောလောဆယ် အခက်အခဲများကြောင့် လှူဒါန်းမှုအတွက် ဂုဏ်ပြုလွှာကို
-                        အသင်းမှပေးအပ်နိုင်ခြင်းမရှိသေးပါ။
-                    </p>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>အသင်းမှာ ပါဝင်ချင်တယ်။ ဘယ်လိုလုပ်ရမလဲ။</summary>
-                    <p>
-                        MTU CDM Support Team သည် MTU ရှိ
-                        CDMဝန်ထမ်းများကိုသာထောက်ပံ့ပေးသောအဖွဲ့အစည်းဖြစ်သဖြင့် MTU
-                        ကျောင်းသား/သူများသာ ပါဝင်နိုင်ပါသည်။
-                    </p>
-                </details>
-            </li>
+            {items.map((item, i) => (
+                <li key={i}>
+                    <details>
+                        <summary>{item.question}</summary>
+                        <p>{items.answer}</p>
+                    </details>
+                </li>
+            ))}
         </ul>
     );
 }
