@@ -7,7 +7,6 @@
     place-content: center;
     gap: 1.5rem;
     & li {
-        // width: 30rem;
         box-shadow: $shadow;
         background-color: $color-white;
         @include rounded(1rem);
