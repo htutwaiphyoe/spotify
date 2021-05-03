@@ -11,7 +11,7 @@ function PaymentCard(props) {
             <ul className={classes.Payment}>
                 {data.map((d, i) => (
                     <li key={i}>
-                        <figure key={i}>
+                        <figure>
                             <Image
                                 src={d.image}
                                 alt={d.description}
