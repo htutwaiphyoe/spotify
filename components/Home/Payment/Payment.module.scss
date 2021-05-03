@@ -4,13 +4,14 @@
 .Payment {
     margin-top: 2rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, 19rem);
     gap: 2rem;
-    place-items: center;
+    // place-items: center;
+    place-content: center;
     & li {
         & figure {
             @include rounded(100%);
-            width: 20rem;
+            // width: 20rem;
             box-shadow: $shadow;
             overflow: hidden;
         }

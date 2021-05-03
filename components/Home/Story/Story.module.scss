@@ -3,11 +3,11 @@
 .Story {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     place-content: center;
     gap: 1.5rem;
     & li {
-        width: 30rem;
+        // width: 30rem;
         box-shadow: $shadow;
         background-color: $color-white;
         @include rounded(1rem);

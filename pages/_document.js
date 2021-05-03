@@ -14,7 +14,7 @@ class AppDocument extends Document {
                         src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
                     ></script>
                     <script
-                        nomodule=""
+                        noModule=""
                         src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
                     ></script>
                 </body>

@@ -1,0 +1,24 @@
+@import "../../../sass/abstracts/mixins";
+@import "../../../sass/abstracts/variables";
+
+.FAQ {
+    & details {
+        width: 100%;
+        color: $color-muted;
+        @include background;
+
+        padding: 1.5rem 2rem;
+        border: 1px solid $color-background;
+        margin-top: 1rem;
+        & summary {
+            cursor: pointer;
+            font-size: 1.7rem;
+            font-weight: 700;
+        }
+
+        & p {
+            font-size: 1.5rem;
+            padding: 1rem 0 0;
+        }
+    }
+}

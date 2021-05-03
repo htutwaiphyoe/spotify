@@ -21,7 +21,7 @@ function Story(props) {
                     </figure>
 
                     <div className={classes.Story__Content}>
-                        <h2>{d.month} လအတွက် ထောက်ပံ့မှုများ</h2>
+                        <h2>{d.month}</h2>
                         <Paragraph>{d.description}</Paragraph>
                     </div>
                 </li>

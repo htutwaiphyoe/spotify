@@ -8,7 +8,7 @@ function HomePage(props) {
     return (
         <Fragment>
             <Head>
-                <title>MTU CDM Support Team</title>
+                <title>Home | MTU CDM Support Team</title>
                 <meta
                     name="description"
                     content="MTU CDM Support Team is formed by MTU Students' Union to help CDM servents in Mandalay Technological University."

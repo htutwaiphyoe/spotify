@@ -3,10 +3,23 @@
 .Home {
     padding: 1.5rem 2rem 10rem;
     width: 100%;
-    max-width: 80rem;
+    max-width: 70rem;
     // @include fadeIn;
     margin: auto;
     @include responsive(575, 0) {
         padding: 1rem 1rem 10rem;
+    }
+
+    & article {
+        background-color: $color-white;
+        padding: 2rem;
+        @include rounded(1rem);
+        margin-top: 1.5rem;
+        box-shadow: $shadow;
+
+        & h1 {
+            font-size: 3rem;
+            font-weight: 900;
+        }
     }
 }
