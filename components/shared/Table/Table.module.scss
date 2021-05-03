@@ -3,20 +3,15 @@
 
 .Table {
     width: 100%;
-    box-shadow: $shadow;
     margin-top: 1rem;
-    background-color: $color-white;
+    @include background;
     border-collapse: collapse;
-    @include rounded(1rem);
-
     & thead {
         text-align: left;
     }
-
     & tr:not(:nth-child(10)) {
         border-bottom: 0.7rem solid $color-background;
     }
-
     & th,
     & td {
         padding: 1.5rem 1rem;

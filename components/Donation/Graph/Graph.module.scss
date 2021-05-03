@@ -2,12 +2,10 @@
 @import "../../../sass/abstracts/variables";
 .Graph {
     width: 100%;
-    box-shadow: $shadow;
     height: 40rem;
-    background-color: $color-white;
     padding: 2rem 1rem;
     margin-top: 1rem;
-    @include rounded(1rem);
+    @include background;
     & canvas {
         width: 100% !important;
     }

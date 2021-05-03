@@ -8,10 +8,8 @@
     gap: 1.5rem;
 
     & li {
-        background-color: $color-white;
+        @include background;
         padding: 2rem 0rem;
-        box-shadow: $shadow;
-        @include rounded(1rem);
     }
 
     & i {

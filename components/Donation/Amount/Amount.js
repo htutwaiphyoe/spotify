@@ -1,6 +1,7 @@
 import classes from "./Amount.module.scss";
 
 function Amount({ items }) {
+    items[3].amount = ((items[1].amount / items[0].amount) * 100).toFixed(2);
     return (
         <ul className={classes.Amount}>
             {items.map((item) => (

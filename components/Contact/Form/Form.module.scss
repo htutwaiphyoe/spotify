@@ -1,10 +1,8 @@
 @import "../../../sass/abstracts/mixins";
 @import "../../../sass/abstracts/variables";
 .Form {
-    background-color: $color-white;
     padding: 2rem;
-    box-shadow: $shadow;
-    @include rounded(1rem);
+    @include background;
 
     & h1 {
         font-size: 3rem;

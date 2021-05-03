@@ -1,7 +1,6 @@
 import classes from "./FAQ.module.scss";
 
 function FAQ({ items }) {
-    console.log(items);
     return (
         <ul className={classes.FAQ}>
             {items.map((item, i) => (

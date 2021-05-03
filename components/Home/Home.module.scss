@@ -11,11 +11,9 @@
     }
 
     & article {
-        background-color: $color-white;
         padding: 2rem;
-        @include rounded(1rem);
+        @include background;
         margin-top: 1.5rem;
-        box-shadow: $shadow;
 
         & h1 {
             font-size: 3rem;

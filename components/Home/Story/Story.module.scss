@@ -7,9 +7,7 @@
     place-content: center;
     gap: 1.5rem;
     & li {
-        box-shadow: $shadow;
-        background-color: $color-white;
-        @include rounded(1rem);
+        @include background;
         overflow: hidden;
     }
     &__Image {
