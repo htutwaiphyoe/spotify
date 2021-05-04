@@ -24,7 +24,8 @@
     }
 
     &_Disable {
-        background-color: $color-light;
+        background-color: rgba($color-muted, 0.1);
+        box-shadow: $shadow;
         cursor: not-allowed;
         color: $color-foreground;
         &:hover {

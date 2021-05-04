@@ -1,4 +1,3 @@
-import Heading from "../shared/Heading/Heading";
 import Paragraph from "../shared/Paragraph/Paragraph";
 import Button from "../shared/Button/Button";
 import Story from "./Story/Story";

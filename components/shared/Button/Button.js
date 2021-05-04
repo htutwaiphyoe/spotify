@@ -14,15 +14,7 @@ function Button(props) {
             </div>
         );
     }
-    if (props.loading) {
-        return (
-            <div className="center">
-                <button className={`${classes.Button} ${classes.Button_Disable}`} disabled={true}>
-                    Loading...
-                </button>
-            </div>
-        );
-    }
+
     return (
         <div className="center">
             <button

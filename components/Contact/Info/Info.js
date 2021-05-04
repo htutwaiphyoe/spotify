@@ -4,8 +4,8 @@ import Paragraph from "../../shared/Paragraph/Paragraph";
 import classes from "./Info.module.scss";
 
 const medias = [
-    { url: "https://m.facebook.com/mtustudentunion", icon: "facebook" },
-    { url: "http://m.me/mtustudentunion", icon: "facebook-messenger" },
+    { url: "https://m.facebook.com/mtustudentunion", icon: "facebook", color: "#1778F2" },
+    { url: "http://m.me/mtustudentunion", icon: "facebook-messenger", color: "#0078FF" },
 ];
 function Info(props) {
     return (
@@ -27,7 +27,7 @@ function Info(props) {
             <ul>
                 {medias.map((media, i) => (
                     <li key={i}>
-                        <a href={media.url}>
+                        <a href={media.url} style={{ color: `${media.color}` }}>
                             <i className={`fab fa-${media.icon}`}></i>
                         </a>
                     </li>
