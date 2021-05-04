@@ -1,5 +1,5 @@
 import classes from "./Paragraph.module.scss";
 
-const Paragraph = (props) => <p className={`${classes.Paragraph} mt-sm mb-sm`}>{props.children}</p>;
+const Paragraph = (props) => <p className={`${classes.Paragraph}`}>{props.children}</p>;
 
 export default Paragraph;
