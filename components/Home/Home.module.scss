@@ -1,24 +1,18 @@
 @import "../../sass/abstracts/mixins";
 @import "../../sass/abstracts/variables";
 .Home {
-    padding: 1.5rem 2rem 10rem;
+    padding: 1rem 2rem 12rem;
     width: 100%;
     max-width: 128rem;
 
     margin: auto;
     @include responsive(575, 0) {
-        padding: 1rem 1rem 10rem;
+        padding: 1rem 1rem 12rem;
     }
 
-    & article {
-        padding: 2rem;
-        @include background;
-        margin-top: 1.5rem;
-
-        & h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            line-height: 1;
-        }
+    & h1 {
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 1;
     }
 }

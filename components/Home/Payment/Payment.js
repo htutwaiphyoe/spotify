@@ -7,7 +7,7 @@ function PaymentCard(props) {
     const { caption, data } = props.data;
     return (
         <Fragment>
-            <h2>{caption}</h2>
+            <h3>{caption}</h3>
             <ul className={classes.Payment}>
                 {data.map((d, i) => (
                     <li key={i}>

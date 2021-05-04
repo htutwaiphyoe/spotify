@@ -13,9 +13,8 @@ function Home(props) {
             <Story data={cards} />
             <article>
                 <Paragraph>
-                    CDM သမားများ ဆက်လက်ရပ်တည်နိုင်ရန်အတွက် ထောက်ပံ့လိုပါက MTU Student's Union ၏
-                    <br />
-                    Page Messanger ကနေတစ်ဆင့် ဆက်သွယ်မေးမြန်းလှူဒါန်းနိုင်ပါသည်။
+                    CDM သမားများ ဆက်လက်ရပ်တည်နိုင်ရန်အတွက် ထောက်ပံ့လိုပါက MTU Student's Union ၏ Page
+                    Messanger ကနေတစ်ဆင့် ဆက်သွယ်မေးမြန်းလှူဒါန်းနိုင်ပါသည်။
                 </Paragraph>
                 <Button link={true} url="http://m.me/mtustudentunion">
                     Support Now
@@ -26,10 +25,13 @@ function Home(props) {
             </article>
             <FAQ items={faqs} />
             <article>
-                <Paragraph>
-                    အောက်ဖော်ပြပါ service များဖြင့် လှူဒါန်းမှုကို ကောက်ခံလျက်ရှိပါသည်။
-                </Paragraph>
+                <h2>အောက်ဖော်ပြပါ service များဖြင့် လှူဒါန်းမှုကို ကောက်ခံလျက်ရှိပါသည်။</h2>
+            </article>
+            <article>
                 <Payment data={pays} />
+            </article>
+
+            <article>
                 <Payment data={banks} />
             </article>
         </section>

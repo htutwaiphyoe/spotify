@@ -1,4 +1,5 @@
 @import "../abstracts/variables";
+@import "../abstracts/mixins";
 
 *,
 *::after,
@@ -35,8 +36,18 @@ h2 {
     font-size: 1.8rem;
     color: $color-muted;
 }
+h3 {
+    text-align: center;
+    font-size: 1.7rem;
+    color: $color-muted;
+}
 input::placeholder {
     font-size: 1.6rem;
     font-family: inherit;
     color: rgba($color-muted, 0.4);
+}
+article {
+    padding: 2rem 1rem;
+    @include background;
+    margin-top: 1rem;
 }
