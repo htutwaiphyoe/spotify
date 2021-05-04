@@ -47,7 +47,12 @@ input::placeholder {
     color: rgba($color-muted, 0.4);
 }
 article {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
     @include background;
     margin-top: 1rem;
+}
+main {
+    width: 100%;
+    max-width: 128rem;
+    margin: auto;
 }

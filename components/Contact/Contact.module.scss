@@ -1,18 +1,13 @@
 @import "../../sass/abstracts/mixins";
 @import "../../sass/abstracts/variables";
 .Contact {
-    width: 100%;
-    max-width: 80rem;
-    margin: auto;
-    padding: 5.5rem 0.5rem 0;
+    padding: 5.5rem 1rem 0;
     display: grid;
-
     grid-template-columns: repeat(2, 1fr);
-
+    gap: 1rem;
     @include responsive(767, 0) {
         grid-template-columns: repeat(1, 1fr);
         margin: 0 auto;
-        padding: 0rem 0.5rem 11rem;
+        padding: 1rem 1rem 11rem;
     }
-    gap: 2rem;
 }

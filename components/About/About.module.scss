@@ -2,12 +2,10 @@
 @import "../../sass/abstracts/variables";
 
 .About {
-    width: 100%;
-    max-width: 128rem;
-    margin: 0 auto;
     flex-direction: column;
     text-align: center;
-    padding: 0rem 1rem 13rem;
+    padding: 0 1rem 12rem;
+
     & div {
         @include center;
     }

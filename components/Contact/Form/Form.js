@@ -3,7 +3,7 @@ import classes from "./Form.module.scss";
 
 function Form(props) {
     return (
-        <article className={classes.Form}>
+        <div className={classes.Form}>
             <h1>Get in touch!</h1>
             <form action="">
                 <div className={classes.Form__Control}>
@@ -32,7 +32,7 @@ function Form(props) {
 
                 <button>Send message</button>
             </form>
-        </article>
+        </div>
     );
 }
 
