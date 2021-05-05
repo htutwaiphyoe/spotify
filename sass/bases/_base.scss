@@ -19,7 +19,7 @@ body {
     box-sizing: border-box;
     background-color: $color-background;
 }
-input,
+input[type="text"],
 textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
