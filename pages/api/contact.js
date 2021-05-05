@@ -38,13 +38,13 @@ async function handler(req, res) {
                 message,
             });
             client.close();
-            res.status(201).json({
+            return res.status(201).json({
                 status: "success",
                 message: "Your message was sent successfully.",
             });
         } catch (e) {
             client.close();
-            res.status(500).json({
+            return res.status(500).json({
                 status: "error",
                 message: "Can't send message successfully!",
             });

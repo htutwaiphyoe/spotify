@@ -200,26 +200,6 @@ function Form(props) {
                     },
                 })
             ).json();
-            setFullNameInput((prevProps) => {
-                return {
-                    ...prevProps,
-                    value: "",
-                };
-            });
-            setEmailInput((prevProps) => {
-                return {
-                    ...prevProps,
-                    value: "",
-                };
-            });
-            setMessageInput((prevProps) => {
-                return {
-                    ...prevProps,
-                    value: "",
-                };
-            });
-            setRadioInput("feedback");
-
             if (response.status === "fail" || response.status === "error") {
                 throw new Error(response.message || "Something went wrong!");
             }
@@ -235,6 +215,25 @@ function Form(props) {
                 message: e.message || "Ah, something went wrong!",
             });
         }
+        setFullNameInput((prevProps) => {
+            return {
+                ...prevProps,
+                value: "",
+            };
+        });
+        setEmailInput((prevProps) => {
+            return {
+                ...prevProps,
+                value: "",
+            };
+        });
+        setMessageInput((prevProps) => {
+            return {
+                ...prevProps,
+                value: "",
+            };
+        });
+        setRadioInput("feedback");
     }
     return (
         <div className={classes.Form}>
