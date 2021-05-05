@@ -1,14 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { validateEmail } from "../../../utils/helperUtils";
 
 import Button from "../../shared/Button/Button";
+import Notification from "../../shared/Notification/Notification";
 import FormElement from "../../shared/FormElement/FormElement";
 import Radio from "../../shared/Radio/Radio";
 import classes from "./Form.module.scss";
 
-const validateEmail = (email) => {
-    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(email);
-};
 function Form(props) {
     const [fullNameInput, setFullNameInput] = useState({
         elementType: "input",
@@ -23,6 +21,7 @@ function Form(props) {
             untouch: "",
             required: "Name is required.",
             minLength: "Name must be at least 6 characters.",
+            maxLength: "Name must be at most 20 characters.",
         },
         status: "untouch",
         value: "",
@@ -70,7 +69,9 @@ function Form(props) {
         touch: false,
     });
     const [validButton, setValidButton] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [radioInput, setRadioInput] = useState("feedback");
+    const [notification, setNotificaton] = useState(null);
     function nameChangeHandler(e) {
         const enteredInput = e.target.value;
 
@@ -80,6 +81,8 @@ function Form(props) {
                 status = "required";
             } else if (enteredInput.trim().length < 6) {
                 status = "minLength";
+            } else if (enteredInput.trim().length > 20) {
+                status = "maxLength";
             } else {
                 status = "untouch";
             }
@@ -88,12 +91,16 @@ function Form(props) {
                 value: enteredInput,
                 touch: true,
                 status,
-                valid: enteredInput.trim().length >= 6,
+                valid: enteredInput.trim().length >= 6 && enteredInput.trim().length <= 20,
             };
         });
 
         setValidButton(
-            enteredInput.trim().length >= 6 && emailInput.valid && messageInput.valid && radioInput
+            enteredInput.trim().length >= 6 &&
+                enteredInput.trim().length <= 20 &&
+                emailInput.valid &&
+                messageInput.valid &&
+                radioInput
         );
     }
     function emailChangeHandler(e) {
@@ -161,17 +168,79 @@ function Form(props) {
             e.target.value && messageInput.valid && fullNameInput.valid && emailInput.valid
         );
     }
-    function formSubmitHandler(e) {
+    useEffect(() => {
+        if (notification && notification.status !== "pending") {
+            const timer = setTimeout(() => {
+                setNotificaton(null);
+            }, 2000);
+            return () => {
+                clearTimeout(timer);
+            };
+        }
+    }, [notification]);
+    async function formSubmitHandler(e) {
         e.preventDefault();
-        console.log(
-            fullNameInput.value.trim(),
-            emailInput.value.trim(),
-            messageInput.value.trim(),
-            radioInput
-        );
+        setLoading(true);
+        setValidButton(false);
+        setNotificaton({
+            title: "Sending message...",
+            status: "pending",
+            message: "Your message is on its way.",
+        });
+        try {
+            const response = await (
+                await fetch("/api/contact", {
+                    method: "POST",
+                    body: JSON.stringify({
+                        name: fullNameInput.value.trim(),
+                        email: emailInput.value.trim(),
+                        type: radioInput,
+                        message: messageInput.value.trim(),
+                    }),
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                })
+            ).json();
+            setFullNameInput((prevProps) => {
+                return {
+                    ...prevProps,
+                    value: "",
+                };
+            });
+            setEmailInput((prevProps) => {
+                return {
+                    ...prevProps,
+                    value: "",
+                };
+            });
+            setMessageInput((prevProps) => {
+                return {
+                    ...prevProps,
+                    value: "",
+                };
+            });
+            setRadioInput("feedback");
+            setLoading(false);
+            if (response.status === "fail" || response.status === "error") {
+                throw new Error(response.message || "Something went wrong!");
+            }
+            setNotificaton({
+                title: "Success",
+                status: "success",
+                message: "Your message has been sent successfully.",
+            });
+        } catch (e) {
+            setNotificaton({
+                title: "Error",
+                status: "pending",
+                message: e.message || "Ah, something went wrong!",
+            });
+        }
     }
     return (
         <div className={classes.Form}>
+            {notification && <Notification {...notification} />}
             <h1>Get in touch!</h1>
             <form onSubmit={formSubmitHandler}>
                 <FormElement
