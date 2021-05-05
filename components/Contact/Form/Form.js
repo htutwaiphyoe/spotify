@@ -69,7 +69,6 @@ function Form(props) {
         touch: false,
     });
     const [validButton, setValidButton] = useState(false);
-    const [loading, setLoading] = useState(false);
     const [radioInput, setRadioInput] = useState("feedback");
     const [notification, setNotificaton] = useState(null);
     function nameChangeHandler(e) {
@@ -180,7 +179,6 @@ function Form(props) {
     }, [notification]);
     async function formSubmitHandler(e) {
         e.preventDefault();
-        setLoading(true);
         setValidButton(false);
         setNotificaton({
             title: "Sending message...",
@@ -221,7 +219,7 @@ function Form(props) {
                 };
             });
             setRadioInput("feedback");
-            setLoading(false);
+
             if (response.status === "fail" || response.status === "error") {
                 throw new Error(response.message || "Something went wrong!");
             }
@@ -233,7 +231,7 @@ function Form(props) {
         } catch (e) {
             setNotificaton({
                 title: "Error",
-                status: "pending",
+                status: "error",
                 message: e.message || "Ah, something went wrong!",
             });
         }

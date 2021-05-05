@@ -50,6 +50,10 @@ async function handler(req, res) {
             });
         }
     }
+    res.status(200).json({
+        status: "error",
+        message: "Route are not defined!",
+    });
 }
 
 export default handler;
