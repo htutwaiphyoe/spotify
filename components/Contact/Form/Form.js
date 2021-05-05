@@ -218,19 +218,28 @@ function Form(props) {
         setFullNameInput((prevProps) => {
             return {
                 ...prevProps,
+                status: "untouch",
                 value: "",
+                valid: false,
+                touch: false,
             };
         });
         setEmailInput((prevProps) => {
             return {
                 ...prevProps,
+                status: "untouch",
                 value: "",
+                valid: false,
+                touch: false,
             };
         });
         setMessageInput((prevProps) => {
             return {
                 ...prevProps,
+                status: "untouch",
                 value: "",
+                valid: false,
+                touch: false,
             };
         });
         setRadioInput("feedback");
