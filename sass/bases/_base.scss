@@ -19,10 +19,16 @@ body {
     box-sizing: border-box;
     background-color: $color-background;
 }
-select {
+input,
+textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    border-radius: 0rem;
+    -webkit-border-radius: 0rem;
+    -moz-border-radius: 0rem;
+    -ms-border-radius: 0rem;
+    -o-border-radius: 0rem;
 }
 ::selection {
     background-color: $color-primary;
