@@ -4,14 +4,13 @@
 .Donation {
     padding: 1rem 1rem 12rem;
     &__Grid {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         margin: 1rem 0;
 
         @include responsive(767, 0) {
-            flex-flow: column;
+            grid-template-columns: 1fr;
         }
     }
 }
