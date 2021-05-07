@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { validateEmail } from "../../../utils/helperUtils";
+import useInput from "../../../hooks/useInput";
 
 import Button from "../../shared/Button/Button";
 import Notification from "../../shared/Notification/Notification";
@@ -8,7 +9,7 @@ import Radio from "../../shared/Radio/Radio";
 import classes from "./Form.module.scss";
 
 function Form(props) {
-    const [fullNameInput, setFullNameInput] = useState({
+    const [fullNameInput, onNameChange, resetNameInput] = useInput({
         elementType: "input",
         elementConfig: {
             required: true,
@@ -17,18 +18,26 @@ function Form(props) {
             id: "name",
         },
         label: "Full Name",
-        statusText: {
-            untouch: "",
-            required: "Name is required.",
-            minLength: "Name must be at least 6 characters.",
-            maxLength: "Name must be at most 20 characters.",
+        validations: {
+            untouch: { value: true, statusText: "", status: "untouch" },
+            required: { value: true, statusText: "Name is required.", status: "required" },
+            minLength: {
+                value: 6,
+                statusText: "Name must be at least 6 characters.",
+                status: "minLength",
+            },
+            maxLength: {
+                value: 20,
+                statusText: "Name must be at most 20 characters.",
+                status: "maxLength",
+            },
         },
         status: "untouch",
         value: "",
         valid: false,
         touch: false,
     });
-    const [emailInput, setEmailInput] = useState({
+    const [emailInput, onEmailChange, resetEmailInput] = useInput({
         elementType: "input",
         elementConfig: {
             required: true,
@@ -37,17 +46,17 @@ function Form(props) {
             id: "email",
         },
         label: "Email",
-        statusText: {
-            untouch: "",
-            required: "Email is required.",
-            invalid: "Email is invalid.",
+        validations: {
+            untouch: { value: true, statusText: "", status: "untouch" },
+            required: { value: true, statusText: "Email is required.", status: "required" },
+            invalid: { value: true, statusText: "Email is invalid.", status: "invalid" },
         },
         status: "untouch",
         value: "",
         valid: false,
         touch: false,
     });
-    const [messageInput, setMessageInput] = useState({
+    const [messageInput, onMessageChange, resetMessageInput] = useInput({
         elementType: "textarea",
         elementConfig: {
             required: true,
@@ -57,116 +66,25 @@ function Form(props) {
             rows: 4,
         },
         label: "Message",
-        statusText: {
-            untouch: "",
-            required: "Message is required.",
-            short: "Message is too short.",
-            long: "Message is too long.",
+        validations: {
+            untouch: { value: true, statusText: "", status: "untouch" },
+            required: { value: true, statusText: "Message is required.", status: "required" },
+            minLength: { value: 20, statusText: "Message is too short.", status: "minLength" },
+            maxLength: { value: 100, statusText: "Message is too long.", status: "maxLength" },
         },
         status: "untouch",
         value: "",
         valid: false,
         touch: false,
     });
-    const [validButton, setValidButton] = useState(false);
     const [radioInput, setRadioInput] = useState("feedback");
+    const [validButton, setValidButton] = useState(false);
     const [notification, setNotificaton] = useState(null);
-    function nameChangeHandler(e) {
-        const enteredInput = e.target.value;
 
-        setFullNameInput((prevProps) => {
-            let status = prevProps.status;
-            if (!enteredInput.trim()) {
-                status = "required";
-            } else if (enteredInput.trim().length < 6) {
-                status = "minLength";
-            } else if (enteredInput.trim().length > 20) {
-                status = "maxLength";
-            } else {
-                status = "untouch";
-            }
-            return {
-                ...prevProps,
-                value: enteredInput,
-                touch: true,
-                status,
-                valid: enteredInput.trim().length >= 6 && enteredInput.trim().length <= 20,
-            };
-        });
+    useEffect(() => {
+        setValidButton(messageInput.valid && fullNameInput.valid && emailInput.valid && radioInput);
+    }, [messageInput.valid, fullNameInput.valid, emailInput.valid, radioInput]);
 
-        setValidButton(
-            enteredInput.trim().length >= 6 &&
-                enteredInput.trim().length <= 20 &&
-                emailInput.valid &&
-                messageInput.valid &&
-                radioInput
-        );
-    }
-    function emailChangeHandler(e) {
-        const enteredInput = e.target.value;
-
-        setEmailInput((prevProps) => {
-            let status = prevProps.status;
-
-            if (enteredInput.trim() === "") {
-                status = "required";
-            } else if (!validateEmail(enteredInput.trim())) {
-                status = "invalid";
-            } else {
-                status = "untouch";
-            }
-
-            return {
-                ...prevProps,
-                value: enteredInput,
-                touch: true,
-                status,
-                valid: validateEmail(enteredInput.trim()),
-            };
-        });
-        setValidButton(
-            validateEmail(enteredInput.trim()) &&
-                fullNameInput.valid &&
-                messageInput.valid &&
-                radioInput
-        );
-    }
-    function messageChangeHandler(e) {
-        const enteredInput = e.target.value;
-
-        setMessageInput((prevProps) => {
-            let status = prevProps.status;
-            if (!enteredInput.trim()) {
-                status = "required";
-            } else if (enteredInput.trim().length < 20) {
-                status = "short";
-            } else if (enteredInput.trim().length > 100) {
-                status = "long";
-            } else {
-                status = "untouch";
-            }
-            return {
-                ...prevProps,
-                value: enteredInput,
-                touch: true,
-                status,
-                valid: enteredInput.trim().length >= 20 && enteredInput.trim().length <= 100,
-            };
-        });
-        setValidButton(
-            enteredInput.trim().length >= 20 &&
-                enteredInput.trim().length <= 100 &&
-                fullNameInput.valid &&
-                emailInput.valid &&
-                radioInput
-        );
-    }
-    function radioChangeHandler(e) {
-        setRadioInput(e.target.value);
-        setValidButton(
-            e.target.value && messageInput.valid && fullNameInput.valid && emailInput.valid
-        );
-    }
     useEffect(() => {
         if (notification && notification.status !== "pending") {
             const timer = setTimeout(() => {
@@ -177,6 +95,7 @@ function Form(props) {
             };
         }
     }, [notification]);
+
     async function formSubmitHandler(e) {
         e.preventDefault();
         setValidButton(false);
@@ -215,33 +134,9 @@ function Form(props) {
                 message: e.message || "Ah, something went wrong!",
             });
         }
-        setFullNameInput((prevProps) => {
-            return {
-                ...prevProps,
-                status: "untouch",
-                value: "",
-                valid: false,
-                touch: false,
-            };
-        });
-        setEmailInput((prevProps) => {
-            return {
-                ...prevProps,
-                status: "untouch",
-                value: "",
-                valid: false,
-                touch: false,
-            };
-        });
-        setMessageInput((prevProps) => {
-            return {
-                ...prevProps,
-                status: "untouch",
-                value: "",
-                valid: false,
-                touch: false,
-            };
-        });
+        resetNameInput();
+        resetEmailInput();
+        resetMessageInput();
         setRadioInput("feedback");
     }
     return (
@@ -253,20 +148,20 @@ function Form(props) {
                     elementType={fullNameInput.elementType}
                     elementConfig={fullNameInput.elementConfig}
                     label={fullNameInput.label}
-                    status={fullNameInput.statusText[fullNameInput.status]}
+                    status={fullNameInput.validations[fullNameInput.status].statusText}
                     value={fullNameInput.value}
                     valid={fullNameInput.valid}
-                    onChange={nameChangeHandler}
+                    onChange={onNameChange}
                     touch={fullNameInput.touch}
                 />
                 <FormElement
                     elementType={emailInput.elementType}
                     elementConfig={emailInput.elementConfig}
                     label={emailInput.label}
-                    status={emailInput.statusText[emailInput.status]}
+                    status={emailInput.validations[emailInput.status].statusText}
                     value={emailInput.value}
                     valid={emailInput.valid}
-                    onChange={emailChangeHandler}
+                    onChange={onEmailChange}
                     touch={emailInput.touch}
                 />
                 <div className={classes.Form__Grid}>
@@ -281,7 +176,7 @@ function Form(props) {
                             defaultChecked: true,
                         }}
                         label="feedback"
-                        onChange={radioChangeHandler}
+                        onChange={(e) => setRadioInput(e.target.value)}
                     />
                     <Radio
                         elementType="input"
@@ -293,7 +188,7 @@ function Form(props) {
                             name: "formType",
                         }}
                         label="report a bug"
-                        onChange={radioChangeHandler}
+                        onChange={(e) => setRadioInput(e.target.value)}
                     />
                 </div>
 
@@ -301,10 +196,10 @@ function Form(props) {
                     elementType={messageInput.elementType}
                     elementConfig={messageInput.elementConfig}
                     label={messageInput.label}
-                    status={messageInput.statusText[messageInput.status]}
+                    status={messageInput.validations[messageInput.status].statusText}
                     value={messageInput.value}
                     valid={messageInput.valid}
-                    onChange={messageChangeHandler}
+                    onChange={onMessageChange}
                     touch={messageInput.touch}
                 />
 

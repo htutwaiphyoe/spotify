@@ -27,6 +27,7 @@
         background-color: rgba($color-muted, 0.1);
         box-shadow: $shadow;
         cursor: not-allowed;
+        pointer-events: none;
         color: $color-foreground;
         &:hover {
             color: $color-foreground;
