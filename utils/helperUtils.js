@@ -4,27 +4,19 @@ export const validateEmail = (email) => {
 };
 
 export const validateInput = (value, validations, status) => {
-    if (validations.required) {
-        if (value.trim().length === 0) {
-            return validations.required.status;
-        }
+    if (validations.required && value.trim().length === 0) {
+        return validations.required.status;
     }
-    if (validations.minLength) {
-        if (value.trim().length < validations.minLength.value) {
-            return validations.minLength.status;
-        }
+    if (validations.minLength && value.trim().length < validations.minLength.value) {
+        return validations.minLength.status;
     }
 
-    if (validations.maxLength) {
-        if (value.trim().length > validations.maxLength.value) {
-            return validations.maxLength.status;
-        }
+    if (validations.maxLength && value.trim().length > validations.maxLength.value) {
+        return validations.maxLength.status;
     }
 
-    if (validations.invalid) {
-        if (!validateEmail(value.trim())) {
-            return validations.invalid.status;
-        }
+    if (validations.invalid && !validateEmail(value.trim())) {
+        return validations.invalid.status;
     }
 
     return validations.untouch.status;

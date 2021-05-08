@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { validateEmail } from "../../../utils/helperUtils";
 import useInput from "../../../hooks/useInput";
 
 import Button from "../../shared/Button/Button";
