@@ -27,7 +27,10 @@ function Graph(props) {
                 },
             },
         };
-        new Chart(chartRef, config);
+        const mychart = new Chart(chartRef, config);
+        return () => {
+            mychart.destroy();
+        };
     }, [type, labels, caption, data, bg, title]);
     return (
         <div className={classes.Graph}>
