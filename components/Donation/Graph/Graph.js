@@ -28,6 +28,7 @@ function Graph(props) {
             },
         };
         const mychart = new Chart(chartRef, config);
+        // destory existing chart
         return () => {
             mychart.destroy();
         };
