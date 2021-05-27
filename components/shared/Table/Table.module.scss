@@ -8,10 +8,17 @@
     border-collapse: collapse;
     & thead {
         text-align: left;
+
+        & tr {
+            border-bottom: 0.7rem solid $color-background;
+        }
     }
-    & tr:not(:nth-child(10)) {
-        border-bottom: 0.7rem solid $color-background;
+    & tbody {
+        & tr:not(:last-child) {
+            border-bottom: 0.7rem solid $color-background;
+        }
     }
+
     & th,
     & td {
         padding: 1.5rem 1rem;
