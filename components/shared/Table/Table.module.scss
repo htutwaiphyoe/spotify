@@ -6,16 +6,19 @@
     margin-top: 1rem;
     @include background;
     border-collapse: collapse;
+    %trGap {
+        border-bottom: 0.7rem solid $color-background;
+    }
     & thead {
         text-align: left;
 
         & tr {
-            border-bottom: 0.7rem solid $color-background;
+            @extend %trGap;
         }
     }
     & tbody {
         & tr:not(:last-child) {
-            border-bottom: 0.7rem solid $color-background;
+            @extend %trGap;
         }
     }
 
