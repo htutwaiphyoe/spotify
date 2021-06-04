@@ -9,11 +9,11 @@
         },
         {
             "type": "supported",
-            "amount": 78004960,
+            "amount": 83704960,
             "icon": "arrow-up-circle",
             "description": "ထောက်ပံ့ပြီး"
         },
-        { "type": "balance", "amount": 5556319, "icon": "wallet", "description": "လက်ကျန်ငွေ" },
+        { "type": "balance", "amount": -143681, "icon": "wallet", "description": "လက်ကျန်ငွေ" },
 
         {
             "type": "percentage",
@@ -58,7 +58,7 @@
         {
             "labels": ["စုစုပေါင်း", "ထောက်ပံ့ပြီး", "လက်ကျန်ငွေ"],
 
-            "data": [83561279, 78004960, 5556319],
+            "data": [83561279, 83704960, -143681],
 
             "title": "ငွေရှင်းတမ်း",
             "caption": "‌ငွေပမာဏ",
