@@ -1,5 +1,5 @@
 function Header(): JSX.Element {
-  return <header className="container">ok</header>;
+  return <header className="text-bookmark-purple">ok</header>;
 }
 
 export default Header;
