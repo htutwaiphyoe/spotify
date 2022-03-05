@@ -6,7 +6,7 @@
 
 @layer base {
   body {
-    @apply overflow-x-hidden font-poppins;
+    @apply overflow-x-hidden font-poppins scroll-smooth;
   }
 }
 

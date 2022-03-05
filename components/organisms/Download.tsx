@@ -28,7 +28,7 @@ export function Download(): JSX.Element {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-20" id="download">
       <SectionHeading
         title="Download the extension"
         description="We've got more browsers in the pipeline. Please do let us know if you've got a favorite you'd like us to prioritize."

@@ -16,7 +16,7 @@ export function FeatureCard({
   return (
     <div className={`relative mt-20 lg:mt-${mt}`}>
       <div
-        className={`container flex flex-col items-center justify-center lg:flex-${direction} gap-x-24`}
+        className={`container flex flex-col items-center justify-center ${direction} gap-x-24`}
       >
         <div className="z-10 flex justify-center flex-1 mb-10 md:mb-36 lg:mb-0">
           <div className="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full">

@@ -1,12 +1,9 @@
-interface INavItem {
-  href: string;
-  text: string;
-}
+import { INavItem } from "@/interfaces/index";
 
 export function NavList(): JSX.Element {
   const navItems: INavItem[] = [
     { href: "#features", text: "Features" },
-    { href: "#pricing", text: "Pricing" },
+    { href: "#download", text: "Download" },
     { href: "#contact", text: "Contact" },
   ];
 

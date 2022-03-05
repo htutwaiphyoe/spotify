@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
 
+export interface INavItem {
+  href: string;
+  text: string;
+}
+
 export interface IChildren {
   children: ReactNode;
 }

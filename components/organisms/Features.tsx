@@ -12,7 +12,7 @@ export function Features(): JSX.Element {
         "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your  favorite sites.",
       mt: "24",
       type: "left",
-      direction: "row",
+      direction: "lg:flex-row",
     },
     {
       src: "/imgs/illustration-features-tab-2.png",
@@ -22,7 +22,7 @@ export function Features(): JSX.Element {
         "Our powerful search feature will help you find saved sites in no  time at all. No need to crawl through all of your bookmarks.",
       mt: "36",
       type: "right",
-      direction: "row-reverse",
+      direction: "lg:flex-row-reverse",
     },
     {
       src: "/imgs/illustration-features-tab-3.png",
@@ -32,12 +32,15 @@ export function Features(): JSX.Element {
         " Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
       mt: "36",
       type: "left",
-      direction: "row",
+      direction: "lg:flex-row",
     },
   ];
 
   return (
-    <section className="pt-20 mt-20 pb-36 bg-bookmark-white lg:mt-60">
+    <section
+      className="pt-20 mt-20 pb-36 bg-bookmark-white lg:mt-60"
+      id="features"
+    >
       <SectionHeading
         title="Features"
         description="Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go."
