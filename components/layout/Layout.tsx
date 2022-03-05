@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { IChildren } from "@/interfaces/index";
+import { Header } from "@/components/organisms/Header";
 
 export function Layout({ children }: IChildren): JSX.Element {
   return (
@@ -12,6 +13,7 @@ export function Layout({ children }: IChildren): JSX.Element {
         new browser tab and see your sites load instantly. Try it for free."
         />
       </Head>
+      <Header />
       {children}
     </>
   );

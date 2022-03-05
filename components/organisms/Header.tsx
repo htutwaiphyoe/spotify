@@ -13,7 +13,7 @@ export function Header(): JSX.Element {
           width="148"
           height="25"
         />
-        <ul className="items-center justify-end flex-1 hidden gap-12 text-xs uppercase sm:flex text-bookmark-blue">
+        <ul className="items-center justify-end flex-1 hidden gap-12 text-sm uppercase sm:flex text-bookmark-blue">
           <NavList />
           <Button text="Login" type="button" classes={btnClasses.red} />
         </ul>

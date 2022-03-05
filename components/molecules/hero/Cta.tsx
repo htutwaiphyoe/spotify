@@ -8,7 +8,7 @@ export function Cta(): JSX.Element {
         Manage your bookmark easily
       </h2>
       <p className="mb-6 text-lg text-center md:w-3/4 md:mx-auto lg:mx-0 lg:w-full text-bookmark-grey lg:text-left">
-        A clean and simple interface to organize your favourite websites. Open a
+        A clean and simple interface to organize your favorite websites. Open a
         new browser tab and see your sites load instantly. Try it for free.
       </p>
       <div className="flex flex-wrap justify-center gap-5">
