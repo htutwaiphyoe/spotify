@@ -2,6 +2,7 @@ import React from "react";
 import { Hero } from "@/components/organisms/Hero";
 import { Features } from "@/components/organisms/Features";
 import { Download } from "@/components/organisms/Download";
+import { Faq } from "@/components/organisms/Faq";
 
 export function HomeTemplate(): JSX.Element {
   return (
@@ -9,6 +10,7 @@ export function HomeTemplate(): JSX.Element {
       <Hero />
       <Features />
       <Download />
+      <Faq />
     </>
   );
 }

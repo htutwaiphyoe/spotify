@@ -25,3 +25,7 @@ export interface IDownloadCard {
   subtitle: string;
   m: string;
 }
+export interface IFaqAccordion {
+  summary: string;
+  details: string;
+}
