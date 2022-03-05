@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Cta } from "@/components/molecules/hero/Cta";
 import { RoundedRectangle } from "@/components/atoms/RoundedRectangle";
+
 export function Hero(): JSX.Element {
   return (
     <section className="relative">
@@ -19,7 +20,7 @@ export function Hero(): JSX.Element {
           </div>
         </div>
       </div>
-      <RoundedRectangle />
+      <RoundedRectangle type="right" />
     </section>
   );
 }

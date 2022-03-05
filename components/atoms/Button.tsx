@@ -7,7 +7,6 @@ interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export function Button({ text, classes, type }: IButtonProps): JSX.Element {
-  console.log(classes);
   return (
     <button type={type} className={`btn ${classes}`}>
       {text}

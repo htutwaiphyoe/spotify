@@ -9,7 +9,7 @@ export function Layout({ children }: IChildren): JSX.Element {
         <title>Bookmark - Manage your bookmark easily</title>
         <meta
           name="description"
-          content=" A clean and simple interface to organize your favourite websites. Open a
+          content=" A clean and simple interface to organize your favorite websites. Open a
         new browser tab and see your sites load instantly. Try it for free."
         />
       </Head>
