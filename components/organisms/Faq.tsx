@@ -3,30 +3,9 @@ import { FaqAccordion } from "@/components/molecules/faq/FaqAccordion";
 import { IFaqAccordion } from "@/interfaces/index";
 import { Button } from "@/components/atoms/Button";
 import { btnClasses } from "@/enums/index";
+import { faqs } from "@/data/index";
 
 export function Faq(): JSX.Element {
-  const faqs: IFaqAccordion[] = [
-    {
-      summary: "What is a Bookmark?",
-      details:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae dicta modi tenetur sunt nemo quidem",
-    },
-    {
-      summary: "How can I request a new browser?",
-      details:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae dicta modi tenetur sunt nemo quidem",
-    },
-    {
-      summary: "Is there a mobile app?",
-      details:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae dicta modi tenetur sunt nemo quidem",
-    },
-    {
-      summary: "What about other Chromium browsers?",
-      details:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae dicta modi tenetur sunt nemo quidem",
-    },
-  ];
   return (
     <section className="py-20 bg-bookmark-white" id="faq">
       <SectionHeading

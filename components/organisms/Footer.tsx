@@ -1,12 +1,9 @@
 import Image from "next/image";
 import { INavItem } from "@/interfaces/index";
 import { NavList } from "@/components/molecules/header/NavList";
+import { socials } from "@/data/index";
 
 export function Footer(): JSX.Element {
-  const socials: INavItem[] = [
-    { text: "fa-facebook-square", href: "www.facebook.com" },
-    { text: "fa-twitter", href: "www.twitter.com" },
-  ];
   return (
     <footer className="py-8 text-white bg-bookmark-blue">
       <div className="container flex flex-col items-center md:flex-row">

@@ -1,4 +1,15 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
+import { btnClasses } from "@/enums/index";
+
+export interface IRectProps {
+  type: string;
+}
+
+export interface IButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  text: string;
+  classes: btnClasses;
+}
 
 export interface INavItem {
   href: string;

@@ -1,32 +1,9 @@
 import { SectionHeading } from "@/components/molecules/shared/SectionHeading";
 import { DownloadCard } from "@/components/molecules/download/DownloadCard";
 import { IDownloadCard } from "@/interfaces/index";
+import { downloads } from "@/data/index";
 
 export function Download(): JSX.Element {
-  const downloads: IDownloadCard[] = [
-    {
-      alt: "chrome",
-      src: "/imgs/logo-chrome.svg",
-      m: "lg:mb-16",
-      title: "Add to Chrome",
-      subtitle: "Minimum version 62",
-    },
-    {
-      alt: "firefox",
-      src: "/imgs/logo-firefox.svg",
-      m: "lg:my-8",
-      title: "Add to Firefox",
-      subtitle: "Minimum version 62",
-    },
-    {
-      alt: "opera mini",
-      src: "/imgs/logo-opera.svg",
-      m: "lg:mt-16",
-      title: "Add to Opera Mini",
-      subtitle: "Minimum version 62",
-    },
-  ];
-
   return (
     <section className="py-20" id="download">
       <SectionHeading

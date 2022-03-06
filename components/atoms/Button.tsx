@@ -1,10 +1,4 @@
-import React from "react";
-import { btnClasses } from "@/enums/index";
-
-interface IButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  text: string;
-  classes: btnClasses;
-}
+import { IButtonProps } from "@/interfaces/index";
 
 export function Button({ text, classes, type }: IButtonProps): JSX.Element {
   return (
