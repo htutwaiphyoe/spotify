@@ -17,3 +17,11 @@ export interface IFeatureCardProps {
   mt: string;
   direction: string;
 }
+
+export interface IDownloadCard {
+  alt: string;
+  src: string;
+  title: string;
+  subtitle: string;
+  m: string;
+}

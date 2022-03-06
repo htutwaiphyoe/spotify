@@ -37,7 +37,7 @@ export function Features(): JSX.Element {
   ];
 
   return (
-    <section className="pt-20 pb-32 mt-20 bg-bookmark-white lg:mt-60">
+    <section className="pt-20 mt-20 pb-36 bg-bookmark-white lg:mt-60">
       <SectionHeading
         title="Features"
         description="Our aim is to make it quick and easy for you to access your favorite websites. Your bookmarks sync between your devices so you can access them on the go."
