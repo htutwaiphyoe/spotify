@@ -2,7 +2,13 @@
 
 # dependencies
 /node_modules
-
+/api
+/components
+/pages
+/sass
+/utils
+/hooks
+/public
 # testing
 /coverage
 
