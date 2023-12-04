@@ -11,6 +11,12 @@ const config: Config = {
       width: {
         300: "300px",
       },
+      minWidth: {
+        64: "4rem",
+      },
+      minHeight: {
+        64: "4rem",
+      },
     },
   },
   plugins: [],

@@ -28,10 +28,10 @@ function Header({ className, children }: HeaderProps) {
           </Button>
         </div>
         <div className="flex md:hidden gap-x-2 items-center">
-          <Button variant="icon" color="white" size="icon">
+          <Button variant="icon" color="white" size="icon-md">
             <HiHome className="text-black" size={20} />
           </Button>
-          <Button variant="icon" color="white" size="icon">
+          <Button variant="icon" color="white" size="icon-md">
             <BiSearch className="text-black" size={20} />
           </Button>
         </div>

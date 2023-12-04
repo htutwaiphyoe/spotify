@@ -17,7 +17,6 @@ function Library() {
           <AiOutlinePlus size={20} />
         </button>
       </div>
-      <div className="flex flex-col gap-y-1 mt-4 px-3">Your Song List!</div>
     </div>
   );
 }
