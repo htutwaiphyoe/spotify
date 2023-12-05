@@ -11,41 +11,44 @@ type HeaderProps = PropsWithChildren & {
   className?: string;
 };
 
-function Header({ className }: HeaderProps) {
+function Header({ className, children }: HeaderProps) {
   const router = useRouter();
+
   return (
     <header
       className={cn("h-fit bg-gradient-to-b from-emerald-800 p-6", className)}
     >
       <div className="w-full mb-4 flex items-center justify-between">
         <div className="hidden md:flex gap-x-2 items-center">
-          <button
-            className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition"
-            onClick={router.back}
-          >
+          <Button variant="icon" color="black" onClick={router.back}>
             <RxCaretLeft size={35} className="text-white" />
-          </button>
-          <button
-            className="rounded-full bg-black flex items-center justify-center hover:opacity-75 transition"
-            onClick={router.forward}
-          >
+          </Button>
+          <Button variant="icon" color="black" onClick={router.forward}>
             <RxCaretRight size={35} className="text-white" />
-          </button>
+          </Button>
         </div>
         <div className="flex md:hidden gap-x-2 items-center">
-          <button className="rounded-full bg-white flex items-center justify-center hover:opacity-75 transition p-2">
+          <Button variant="icon" color="white" size="icon">
             <HiHome className="text-black" size={20} />
-          </button>
-          <button className="rounded-full bg-white flex items-center justify-center hover:opacity-75 transition p-2">
+          </Button>
+          <Button variant="icon" color="white" size="icon">
             <BiSearch className="text-black" size={20} />
-          </button>
+          </Button>
         </div>
         <div className="flex justify-between items-center gap-x-4">
           <div>
-            <Button>Sign Up</Button>
+            <Button variant="fill" color="primary" size="md">
+              Sign Up
+            </Button>
+          </div>
+          <div>
+            <Button variant="fill" color="white" size="md">
+              Sign In
+            </Button>
           </div>
         </div>
       </div>
+      {children}
     </header>
   );
 }
