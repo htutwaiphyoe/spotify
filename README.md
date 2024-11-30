@@ -24,4 +24,11 @@ struct Deck {
 #[derive(Debug)]
 
 {:?}
+
+{:#?}
+
+array => []
+vector => vec![]
+
+mutable vs immutable => mut
 ```

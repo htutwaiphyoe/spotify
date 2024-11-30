@@ -5,7 +5,7 @@ struct Deck {
 
 fn main() {
   let mut cards = vec![];
-  let suits = ["Hearts", "Diamonds", "Clubs", "Spades"];
+  let suits = ["Spades", "Diamonds", "Hearts", "Clubs"];
   let values = [
     "A",
     "2",
@@ -29,5 +29,5 @@ fn main() {
   }
 
   let deck = Deck { cards };
-  println!("Deck: {:?}", deck);
+  println!("Deck: {:#?}", deck);
 }
