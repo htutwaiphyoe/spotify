@@ -1,3 +1,8 @@
+struct Deck {
+  cards: Vec<String>,
+}
+
 fn main() {
-    println!("Hello, world!");
+  let deck = Deck { cards: Vec::new() };
+  println!("Deck: {:?}", deck);
 }
