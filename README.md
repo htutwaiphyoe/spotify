@@ -15,3 +15,13 @@ cargo run
 
 cargo run -q
 ```
+
+```rust
+struct Deck {
+  cards: Vec<String>,
+}
+
+#[derive(Debug)]
+
+{:?}
+```
