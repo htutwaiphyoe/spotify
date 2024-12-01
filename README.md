@@ -36,3 +36,13 @@ associated functions vs methods => &self
 
 implicit return => no return and semicolon in last executed expression
 ```
+
+crate means package or library
+
+standard library => doc.rust-lang.org/std
+
+external library => crates.io
+
+```bash
+cargo add rand
+```
