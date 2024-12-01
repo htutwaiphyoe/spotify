@@ -46,3 +46,13 @@ external library => crates.io
 ```bash
 cargo add rand
 ```
+
+```rust
+mod module;
+
+module::submodule::trait
+
+use crate::{}
+
+crate::trait
+```

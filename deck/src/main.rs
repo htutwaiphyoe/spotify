@@ -1,3 +1,5 @@
+use rand::{ thread_rng, seq::SliceRandom };
+
 #[derive(Debug)]
 struct Deck {
   cards: Vec<String>,
