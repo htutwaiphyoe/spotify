@@ -55,4 +55,10 @@ module::submodule::trait
 use crate::{}
 
 crate::trait
+
+&mut self
+
+iBit => i8 => including negative and positive
+uBit => u8 => unsigned
+fBit => f32 => decimal
 ```
