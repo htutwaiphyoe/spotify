@@ -31,4 +31,8 @@ array => []
 vector => vec![]
 
 mutable vs immutable => mut
+
+associated functions vs methods => &self
+
+implicit return => no return and semicolon in last executed expression
 ```

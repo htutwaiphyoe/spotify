@@ -29,7 +29,7 @@ impl Deck {
       }
     }
 
-    return Deck { cards };
+    Deck { cards }
   }
 }
 
